@@ -1,0 +1,11 @@
+{
+  "name": "supertoniccode",
+  "version": "1.0.0",
+  "description": "DECO2017_A3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zhiyuan Zhou (Eric)",
+  "license": "ISC"
+}
