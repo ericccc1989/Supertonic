@@ -108,10 +108,7 @@ h2{
     padding-top:40px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight:700;
-    color:#4F4F4F;
-}
-.nav_plan{
-    text-decoration: none;
+    color:hsl(0, 0%, 31%);
 }
 .nav_practice{
     text-decoration: none;
@@ -119,67 +116,3 @@ h2{
 .nav_library{
     text-decoration: none;
 }
-.main{
-    display: flex;
-    position:fixed;
-    width: 900px;
-    left:400px;
-    height: auto; 
-    top:120px;
-    bottom:120px;
- }
-
-.main div{
-    margin: auto;
-    display: block;
-    float: right;
-    height:80%;
-    width:40%;
-}
-h3{
-    margin-top:30%;
-    position: relative;
-    font-size:22px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:400;
-    color:#4F4F4F; 
-}
-h4{
-    margin:0;
-    position: relative;
-    top:0;
-    font-size:68px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:700;
-    color:#4F4F4F; 
-}
-.paragraph p{
-    position: relative;
-    font-size:16px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:200;
-    color:#4F4F4F; 
-}
-.home{
-    width:100%;
-    border-radius:35px;
-}
-.start{
-    color:#FFFFFF;
-    background:#38BA97;
-    display: inline-block;
-    position: fixed;
-    border:none;
-    border-radius:11px;  
-    text-align: center;
-    width:145px;
-    height:50px;
-    font-family: 'Josefin Sans';
-    font-size:29px;
-    font-weight: 900;
-    font-style: normal;
-}
-.start:hover {
-    background:#34997e; /* Green */
-    color: white;
-  }
