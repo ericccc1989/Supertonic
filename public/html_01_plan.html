@@ -12,7 +12,9 @@
 </head>
 <body>
   <div class="side">
-   <img src="images/svg_01_logo.svg" class="logo" />
+    <a href="index.html" class="nav_plan">
+      <img src="images/svg_01_logo.svg" class="logo" />
+    </a> 
    <p class="slogan">“Train your music in an incredible efficiency”</p>
    <button class="create">Create</button>
    <img src="images/svg_02_calendar.svg" class="calendar" />
@@ -25,25 +27,42 @@
       <button class="btn close-modal">&times;</button>
     </div>
     <div class="body">
-      <input type="text" id="todo_input">
-      <input type="submit" value="Add Todo" id="todo_submit">
+      <input type="text" id="todo_input" >
+      <input type="checkbox" id="todo_freq_everyday" name="active" value="Yes" onclick="onlyOne(this)"> Every Day
+      <input type="checkbox" id="todo_freq_weekday" name="active" value="Yes" onclick="onlyOne(this)"> Weekday
+      <input type="checkbox" id="todo_freq_weekend" name="active" value="Yes" onclick="onlyOne(this)"> Weekend
+      <input type="submit" value="Add Todo" id="todo_submit"> 
     </div>
   </div>
   <!--modal-->
   <div class="todo-container">
     <div class="status" id="no_status">
         <h1>No Status</h1>
-        <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
+        <button id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
         <div class="todo" draggable="true">
-            Buy a Pizza
-            <span class="close">&times;</span>
+          <input class="checkbox" type="checkbox">
+          Jazz Chords
+          <p class="frequency">Every Day</p>
+          <span class="close">&times;</span>
         </div>
     </div>
     <div class="status">
         <h1>In Progress</h1>
+        <div class="todo" draggable="true">
+          <input class="checkbox" type="checkbox">
+          Pentatonic Scales
+          <p class="frequency">Weekend</p>
+          <span class="close">&times;</span>
+        </div>
     </div>
     <div class="status">
         <h1>Completed</h1>
+        <div class="todo" draggable="true">
+          <input class="checkbox" type="checkbox">
+          Prince Style Licks
+          <p class="frequency">Weekday</p>
+          <span class="close">&times;</span>
+        </div>
     </div>
 </div>
 <div class="nav">

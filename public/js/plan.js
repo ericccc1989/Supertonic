@@ -78,12 +78,55 @@ const todo_submit = document.getElementById('todo_submit');
 
 todo_submit.addEventListener("click", createTodo);
 
+
+/* In normal condition, mutiple checkboxes can be selected at the same times. This onlyone function let only one check box can be selected at once */
+function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('active');
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) 
+        item.checked = false;
+    })
+}
+
 function createTodo(){
+    /* task div and checkbox are created in this part*/
     const todo_div = document.createElement("div");
+    const check = document.createElement("input");
+
+    /* This part imports user's input and get ready to be appended in div. I also set a max string length of 15 in order to ensure text in the task div will not be too long. */
     const input_val = document.getElementById("todo_input").value;
     const txt = document.createTextNode(input_val);
+    var input_val_max =input_val.substring(0,15)+"...";
+    const txt_max = document.createTextNode(input_val_max);
+    
+    /* In this part, the javascript code extract input from 3 frequency checkboxes. The boolean variable in if statement help choose the frequency text that be presented in task div  */
+    const boolean_everyday = document.getElementById("todo_freq_everyday");
+    const boolean_weekday = document.getElementById("todo_freq_weekday");
+    const boolean_weekend = document.getElementById("todo_freq_weekend");
 
-    todo_div.appendChild(txt);
+    var frequency = document.createElement('p');
+    frequency.classList.add("frequency");
+
+    if (boolean_everyday.checked){
+        frequency.innerHTML = 'Every Day';
+    } else if (boolean_weekday.checked){
+        frequency.innerHTML = 'Weekday';
+    } else if (boolean_weekend.checked){
+        frequency.innerHTML = 'Weekend';
+    } 
+    todo_div.appendChild(frequency);
+   
+    check.setAttribute("type", "checkbox");
+    check.classList.add("checkbox");
+    todo_div.appendChild(check);
+
+    /* This if statement help select text that will appear in the div. If input length smaller than 15, all the string will be presented, if larger than 15, only first 15 characters will be presneted*/
+    if (input_val.length <=15){
+       todo_div.appendChild(txt);}
+    else{
+       todo_div.appendChild(txt_max);
+    }
+
     todo_div.classList.add("todo");
     todo_div.setAttribute("draggable","true");
 
