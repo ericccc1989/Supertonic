@@ -5,20 +5,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
-  <link href="css_01_plan.css" rel="stylesheet">
+  <link href="css/01_plan.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="side">
-   <img src="svg_01_logo.svg" class="logo" />
+   <img src="images/svg_01_logo.svg" class="logo" />
    <p class="slogan">“Train your music in an incredible efficiency”</p>
    <button class="create">Create</button>
-   <img src="svg_02_calendar.svg" class="calendar" />
+   <img src="images/svg_02_calendar.svg" class="calendar" />
   <h2>Current Project</h2>
   </div>
-  <div class="nav">
+  <!--modal-->
+  <div class="modal" id="todo_form">
+    <div class="header">
+      <div class="title">Create your task</div>
+      <button class="btn close-modal">&times;</button>
+    </div>
+    <div class="body">
+      <input type="text" id="todo_input">
+      <input type="submit" value="Add Todo" id="todo_submit">
+    </div>
+  </div>
+  <!--modal-->
+  <div class="todo-container">
+    <div class="status" id="no_status">
+        <h1>No Status</h1>
+        <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
+        <div class="todo" draggable="true">
+            Buy a Pizza
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <div class="status">
+        <h1>In Progress</h1>
+    </div>
+    <div class="status">
+        <h1>Completed</h1>
+    </div>
+</div>
+<div class="nav">
     <div>
       <a href="html_01_plan.html" class="nav_plan">
         <p>Plan</p>
@@ -34,8 +62,10 @@
         <p>Library</p>
       </a>
     </div>
-  </div>
-  <img src="svg_03_bubble1.svg" class="bubble1" />
-  <img src="svg_04_bubble2.svg" class="bubble2" />
+</div>
+<div id="overlay"></div>
+<img src="images/svg_03_bubble1.svg" class="bubble1" />
+<img src="images/svg_04_bubble2.svg" class="bubble2" />
+<script src="js/plan.js"></script>
 </body>
 </html>
