@@ -1,15 +1,95 @@
-@media only screen and (max-width: 1580px){
+@media only screen and (min-width:0px) and (max-width: 780px){ 
+    .side{
+        display:none;
+    }
     .nav{
+        display:none;
+    }
+    .bubble1{
+        overflow:hidden;
+        position:fixed;
+        margin-left:0;
+        transform: translate(-40%,-40%);
+        width:250px;
+        z-index:-1;
+    }
+    .bubble2{
+        overflow:hidden;
+        position:fixed;
+        right: 0px;
+        bottom: 0px;
+        width:250px;
+        transform: translate(40%,40%);
+        z-index:-1;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        position:absolute;
+        width: 85%;
+        height:80%;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+     }
+    .home{
+        display: none;
+    }
+    .logo_mobile{
         display: flex;
         position: fixed;
-        left:950px;
-        width:500px;
-        height:100px;
-        top:0px;
-        z-index:-2;
+        width:90%;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
+    h3{
+        display:none;
+    }
+    h4{
+        display:none;
+    }
+    .paragraph p{
+        display: inline-block;
+        position: fixed;
+        text-align: center;
+        top:45%;
+        left: 50%;
+        width:80%;
+        transform: translate(-50%, -50%);
+        font-size:14px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight:200;
+        color:#4F4F4F; 
+    }
+    .start{
+        display: inline-block;
+        position: fixed;
+        top:63%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border:none;
+        border-radius:11px;  
+        color:#FFFFFF;
+        background:#38BA97;
+        border:none;
+        border-radius:11px;  
+        text-align: center;
+        width:145px;
+        height:50px;
+        font-family: 'Josefin Sans';
+        font-size:29px;
+        font-weight: 900;
+        font-style: normal;
+        cursor:pointer;
+    }
+    .start:hover {
+        background:#34997e; /* Green */
+        color: white;
+      }
 }
-@media only screen and (min-width: 1580px){
+
+@media only screen and (min-width:780px){
     .nav{
         display: flex;
         position: fixed;
@@ -19,6 +99,78 @@
         top:0px;
         z-index:-2;
     }
+    .bubble1{
+        overflow:hidden;
+        position:fixed;
+        width:300px;
+        transform: translate(80%,-20%);
+        z-index:-1;
+    }
+    .bubble2{
+        overflow:hidden;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        width:300px;
+        transform: translate(30%,30%);
+        z-index:-1;
+    }
+    .main{
+        display: flex;
+        position:fixed;
+        width: 900px;
+        left:400px;
+        height: auto; 
+        top:110px;
+        bottom:110px;
+     }
+     .logo_mobile{
+        display:none;
+    }
+    h3{
+        margin-top:25%;
+        position: relative;
+        font-size:22px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight:400;
+        color:#4F4F4F; 
+    }
+    h4{
+        margin:0;
+        position: relative;
+        top:0;
+        font-size:68px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight:700;
+        color:#4F4F4F; 
+    }
+    .paragraph p{
+        position: relative;
+        font-size:16px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight:200;
+        color:#4F4F4F; 
+    }
+    .start{
+        color:#FFFFFF;
+        background:#38BA97;
+        display: inline-block;
+        position: fixed;
+        border:none;
+        border-radius:11px;  
+        text-align: center;
+        width:145px;
+        height:50px;
+        font-family: 'Josefin Sans';
+        font-size:29px;
+        font-weight: 900;
+        font-style: normal;
+        cursor:pointer;
+    }
+    .start:hover {
+        background:#34997e; /* Green */
+        color: white;
+      }
 }
 body { 
     margin:0; 
@@ -55,19 +207,14 @@ a{
     border:none;
     border-radius:11px;  
     text-align: center;
-    width:145px;
+    width:200px;
     height:50px;
     margin-left:30px;
     font-family: 'Josefin Sans';
-    font-size:29px;
-    font-weight: 900;
+    font-size:23px;
+    font-weight: 500;
     font-style: normal;
-    cursor:pointer;
 }
-.create:hover {
-    background:#34997e; /* Green */
-    color: white;
-  }
 .calendar{
     display: block;
     margin-left:30px;
@@ -81,22 +228,7 @@ h2{
     font-weight:700;
     color:#4F4F4F;  
 }
-.bubble1{
-    overflow:hidden;
-    position:fixed;
-    width:300px;
-    transform: translate(80%,-20%);
-    z-index:-1;
-}
-.bubble2{
-    overflow:hidden;
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    width:300px;
-    transform: translate(30%,30%);
-    z-index:-1;
-}
+
 
 .nav div{
     margin: auto;
@@ -123,15 +255,7 @@ h2{
 .nav_library{
     text-decoration: none;
 }
-.main{
-    display: flex;
-    position:fixed;
-    width: 900px;
-    left:400px;
-    height: auto; 
-    top:120px;
-    bottom:120px;
- }
+
 
 .main div{
     margin: auto;
@@ -140,51 +264,9 @@ h2{
     height:80%;
     width:40%;
 }
-h3{
-    margin-top:30%;
-    position: relative;
-    font-size:22px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:400;
-    color:#4F4F4F; 
-}
-h4{
-    margin:0;
-    position: relative;
-    top:0;
-    font-size:68px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:700;
-    color:#4F4F4F; 
-}
-.paragraph p{
-    position: relative;
-    font-size:16px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:200;
-    color:#4F4F4F; 
-}
+
+
 .home{
-    width:100%;
+    width:95%;
     border-radius:35px;
 }
-.start{
-    color:#FFFFFF;
-    background:#38BA97;
-    display: inline-block;
-    position: fixed;
-    border:none;
-    border-radius:11px;  
-    text-align: center;
-    width:145px;
-    height:50px;
-    font-family: 'Josefin Sans';
-    font-size:29px;
-    font-weight: 900;
-    font-style: normal;
-    cursor:pointer;
-}
-.start:hover {
-    background:#34997e; /* Green */
-    color: white;
-  }

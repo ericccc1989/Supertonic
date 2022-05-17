@@ -74,9 +74,9 @@ window.onclick = (event) => {
 };
 
 /* create todo */
-const todo_submit = document.getElementById('todo_submit');
+const kanban_submit = document.getElementById('todo_submit');
 
-todo_submit.addEventListener("click", createTodo);
+kanban_submit.addEventListener("click", createTaskdiv);
 
 
 /* In normal condition, mutiple checkboxes can be selected at the same times. This onlyone function let only one check box can be selected at once */
@@ -88,7 +88,7 @@ function onlyOne(checkbox) {
     })
 }
 
-function createTodo(){
+function createTaskdiv(){
     /* task div and checkbox are created in this part*/
     const todo_div = document.createElement("div");
     const check = document.createElement("input");
@@ -120,7 +120,7 @@ function createTodo(){
     check.classList.add("checkbox");
     todo_div.appendChild(check);
 
-    /* This if statement help select text that will appear in the div. If input length smaller than 15, all the string will be presented, if larger than 15, only first 15 characters will be presneted*/
+    /* This if statement help select text that will appear in the div. If input length smaller than 15, all the string will be presented, if larger than 15, only first 15 characters will be presented*/
     if (input_val.length <=15){
        todo_div.appendChild(txt);}
     else{
