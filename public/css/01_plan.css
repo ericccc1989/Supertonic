@@ -1,6 +1,13 @@
 *{
   box-sizing: border-box;
 }
+:root{
+  --text:#4F4F4F;
+  --main_green:#38BA97;
+}
+body{
+  font-family: 'Josefin Sans', sans-serif;
+}
 @media only screen and (min-width: 780px){
     .nav{
         display: flex;
@@ -38,11 +45,11 @@
       margin-left:30px;
       margin-right:15px;
       font-family: 'Josefin Sans';
-      color:#4F4F4F;
+      color:var(--text);
   }
   .create{
       color:#FFFFFF;
-      background:#38BA97;
+      background:var(--main_green);
       display: inline-block;
       position: fixed;
       border:none;
@@ -67,7 +74,7 @@
       margin-left:30px;
       font-family: 'Josefin Sans', sans-serif;
       font-weight:700;
-      color:#4F4F4F;  
+      color:var(--text); 
   }
   .bubble2{
       overflow:hidden;
@@ -96,7 +103,7 @@
       padding-top:40px;
       font-family: 'Josefin Sans', sans-serif;
       font-weight:700;
-      color:hsl(0, 0%, 31%);
+      color:var(--text);
   }
   .nav_practice{
       text-decoration: none;
@@ -119,7 +126,7 @@
     float:right;
     font-family: 'Josefin Sans', sans-serif;
     font-weight:700;
-    color:#4F4F4F;  
+    color:var(--text); 
   }
   .guitar{
     margin-right:210px;
@@ -154,7 +161,7 @@
     top:100px;
     left:415px;
     font-size:25px;
-    color:#494949;
+    color:var(--text);
     font-family: 'Josefin Sans', sans-serif;
   }
   .todo-container{
@@ -177,7 +184,7 @@
       position:absolute;
       top:0;
       left:0;
-      color:#4F4F4F; 
+      color:var(--text);
       margin:0;
       width:100%;
       padding:0.5rem 1rem;
@@ -186,7 +193,7 @@
   }
   #add_btn{
       padding:0.5rem 1rem;
-      background-color: #38BA97;;
+      background-color: var(--main_green);
       color:#fff;
       outline:none;
       border:none;
@@ -200,8 +207,8 @@
   }
   #add_btn:hover{
       background-color:#fff;
-      border: 3px solid #38BA97;
-      color:#38BA97;
+      border: 3px solid var(--main_green);
+      color:var(--main_green);
   }
   .todo{
       display:flex;
@@ -209,7 +216,7 @@
       align-items: center;
       position:relative;
       background-color: #E2F1E0;
-      color:#494949;
+      color:var(--text);
       border-radius: 4px;
       padding:0.5rem 1rem;
       font-size:18px;
@@ -326,12 +333,12 @@
   
     .modal .body {
       padding: 0.75rem;
-      color:#494949;
+      color:var(--text);
       font-family:'Josefin Sans', sans-serif;
       font-size: 16px;
     }
     .popup_title{
-      color:#494949;
+      color:var(--text);
       font-size: 20px;
       font-family:'Josefin Sans', sans-serif;
       font-weight:500;
@@ -340,7 +347,7 @@
     .modal button{
       width:50px;
       height:50px;
-      color:#494949;
+      color:var(--text);
       background-color: transparent;
       border:none;
     }
@@ -366,7 +373,7 @@
   
     }
     #todo_submit{
-        background-color: #38BA97;
+        background-color: var(--main_green);
         color:#f3f3f3;
         font-size:1.25rem;
         border-radius: 4px;
@@ -398,7 +405,7 @@ h2{
   margin-left:30px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight:700;
-  color:#4F4F4F;  
+  color:var(--text);
 }
 
 .nav{
@@ -413,7 +420,7 @@ h2{
    top:15px;
    left:33px;
    font-size:25px;
-   color:#494949;
+   color:var(--text);
    font-family: 'Josefin Sans', sans-serif;
 }
 .mobile_hearder{
@@ -445,7 +452,7 @@ h2{
   position:absolute;
   top:0;
   left:0;
-  color:#4F4F4F; 
+  color:var(--text); 
   margin:0;
   width:100%;
   padding:0.5rem 1rem;
@@ -454,7 +461,7 @@ h2{
 }
 #add_btn{
   padding:0.5rem 1rem;
-  background-color: #38BA97;;
+  background-color: var(--main_green);
   color:#fff;
   outline:none;
   border:none;
@@ -468,8 +475,8 @@ h2{
 }
 #add_btn:hover{
   background-color:#fff;
-  border: 3px solid #38BA97;
-  color:#38BA97;
+  border: 3px solid var(--main_green);
+  color:var(--main_green);
 }
 .todo{
   display:flex;
@@ -477,7 +484,7 @@ h2{
   align-items: center;
   position:relative;
   background-color: #E2F1E0;
-  color:#494949;
+  color:var(--text);
   border-radius: 4px;
   padding:0.5rem 1rem;
   font-size:18px;
@@ -594,12 +601,12 @@ body {
 
 .modal .body {
   padding: 0.75rem;
-  color:#494949;
+  color:var(--text);
   font-family:'Josefin Sans', sans-serif;
   font-size: 16px;
 }
 .popup_title{
-  color:#494949;
+  color:var(--text);
   font-size: 20px;
   font-family:'Josefin Sans', sans-serif;
   font-weight:500;
@@ -608,7 +615,7 @@ body {
 .modal button{
   width:50px;
   height:50px;
-  color:#494949;
+  color:var(--text);
   background-color: transparent;
   border:none;
 }
@@ -634,7 +641,7 @@ body {
 
 }
 #todo_submit{
-    background-color: #38BA97;
+    background-color: var(--main_green);
     color:#f3f3f3;
     font-size:1.25rem;
     border-radius: 4px;
@@ -663,6 +670,5 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 }
 

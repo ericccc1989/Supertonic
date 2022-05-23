@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello, world!</title>
+  <title>Plan_Supertonic</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
   <div class="side">
@@ -16,11 +18,48 @@
       <img src="images/svg_01_logo.svg" class="logo" />
     </a> 
    <p class="slogan">“Train your music in an incredible efficiency”</p>
-   <button class="create">Create</button>
+   <button class="create">Hello! Musician</button>
    <img src="images/svg_02_calendar.svg" class="calendar" />
   <h2>Current Project</h2>
+  <div class="current_project">
+    <div><img src="images/svg_05_guitar.svg" class="project_icon_guitar" /><p class="guitar">Guitar</p></div>
+    <div><img src="images/svg_06_piano.svg" class="project_icon_piano" /><p class="piano">Piano</p></div>
+    <div><img src="images/svg_07_theory.svg" class="project_icon_theory" /><p class="theory">Music Theory</p></div>
   </div>
-  <div class="nav">
+  </div>
+  <div class="mobile_hearder"></div>
+  <h3>Practice</h3>
+  <div class="watch">
+    <div class="metronome">
+      <div class="bpm">
+        BPM
+      </div>
+      <div class="player">
+        <audio src=""></audio>
+        <div class="btns">
+          <div class="icons_prev">
+            <ion-icon name="play-back-outline"></ion-icon>
+          </div>
+          <div class="icons_playpause"> 
+            <ion-icon name="play-outline"></ion-icon>
+          </div>
+          <div class="icons_next">
+            <ion-icon name="play-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="time">
+      00:00:00
+    </div>
+    <img src="images/svg_11_ellipse.svg" class="ellipse" />
+    <div class="controls">
+      <button id="stop">Stop</button>
+      <button id="start">Start</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+<div class="nav">
     <div>
       <a href="html_01_plan.html" class="nav_plan">
         <p>Plan</p>
@@ -36,8 +75,27 @@
         <p>Library</p>
       </a>
     </div>
-  </div>
-  <img src="images/svg_03_bubble1.svg" class="bubble1" />
-  <img src="images/svg_04_bubble2.svg" class="bubble2" />
+</div>
+<div id="overlay"></div>
+<img src="images/svg_03_bubble1.svg" class="bubble1" />
+<img src="images/svg_04_bubble2.svg" class="bubble2" />
+<div class="icons_bot">
+  <a href="html_01_plan.html">
+    <div>   
+    <img src="images/svg_08_plan.svg">
+    </div>
+  </a>
+  <a href="html_02_practice.html">
+    <div> 
+    <img src="images/svg_09_practice.svg">
+    </div>
+  </a>
+  <a href="html_03_library.html">
+    <div>
+    <img src="images/svg_10_library.svg">
+    </div>
+  </a>
+</div>
+<script src="js/practice.js"></script>
 </body>
 </html>
