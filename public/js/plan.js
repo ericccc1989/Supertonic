@@ -1,3 +1,5 @@
+/* Some part of the code in plan page is inspired by tutorial of Basir Payenda */
+/* This section combines of click and drag, which allows users to drag kanban card created between each columns. This part of javascript content is mainly inspired by Basir Payenda's tutorial. */
 const todos = document.querySelectorAll(".todo");
 const all_status = document.querySelectorAll(".status");
 let draggableTodo = null;
@@ -26,7 +28,6 @@ all_status.forEach((status) =>{
 
 function dragOver(e){
     e.preventDefault();
-    // console.log("dragOver");
 }
 
 function dragEnter(){
@@ -44,7 +45,6 @@ function dragDrop(){
     console.log("dropped");
 }
 
-// modal;
 
 const btns = document.querySelectorAll("[data-target-modal]");
 const close_modals = document.querySelectorAll(".close-modal");
@@ -72,8 +72,6 @@ window.onclick = (event) => {
     overlay.classList.remove("active");
   }
 };
-
-/* create todo */
 const kanban_submit = document.getElementById('todo_submit');
 
 kanban_submit.addEventListener("click", createTaskdiv);
@@ -87,7 +85,7 @@ function onlyOne(checkbox) {
         item.checked = false;
     })
 }
-
+/* The createTaskdiv function is based on tutorials' original code, but I improve a lot of from it so that the user can be allowed to create not only input, but also checkboxes, frequency they choose, and the max input limits */
 function createTaskdiv(){
     /* task div and checkbox are created in this part*/
     const todo_div = document.createElement("div");
@@ -99,7 +97,7 @@ function createTaskdiv(){
     var input_val_max =input_val.substring(0,15)+"...";
     const txt_max = document.createTextNode(input_val_max);
     
-    /* In this part, the javascript code extract input from 3 frequency checkboxes. The boolean variable in if statement help choose the frequency text that be presented in task div  */
+    /* In this part, the javascript code extract boolean input from 3 frequency checkboxes. The boolean variable in if statement help choose the frequency text that be presented in task div  */
     const boolean_everyday = document.getElementById("todo_freq_everyday");
     const boolean_weekday = document.getElementById("todo_freq_weekday");
     const boolean_weekend = document.getElementById("todo_freq_weekend");
@@ -107,6 +105,7 @@ function createTaskdiv(){
     var frequency = document.createElement('p');
     frequency.classList.add("frequency");
 
+    /* This if statement choose the right appending string based on boolean variable from checkbox*/
     if (boolean_everyday.checked){
         frequency.innerHTML = 'Every Day';
     } else if (boolean_weekday.checked){
@@ -130,7 +129,7 @@ function createTaskdiv(){
     todo_div.classList.add("todo");
     todo_div.setAttribute("draggable","true");
 
-    /* create span */
+    /* This part create span to the kanban card and assign "display: none" to kanban card if users click span.*/
     const span = document.createElement("span");
     const span_txt =document.createTextNode("\u00D7");
     span.classList.add("close");
@@ -143,7 +142,6 @@ function createTaskdiv(){
     span.addEventListener('click', ()=>{
         span.parentElement.style.display = "none";
     });
-    //console.log(todo_div);
 
     todo_div.addEventListener("dragstart", dragStart);
     todo_div.addEventListener("dragend", dragEnd);
@@ -153,8 +151,8 @@ function createTaskdiv(){
     overlay.classList.remove("active");
 }
 
+/* This part allow the pop up window auto close if users create a kanban card successfully*/
 const close_btns = document.querySelectorAll(".close");
-
 
 close_btns.forEach((btn)=> {
     btn.addEventListener('click', ()=>{

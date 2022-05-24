@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--Reference: Basir Payenda.(2020, Dec 22). To Do App Using HTML, CSS and JavaScript (Drag & Drop)|Project #10/100[Video file]. Retrieved from https://www.youtube.com/watch?v=m3StLl-H4CY-->
+  <!--The task list and kanban board is implemented in plan page. The users can click the add button to create new kanban card.
+  They can delete the card, click and drag between each column, check each kanban card and choose the frequency of each task.-->
   <title>Plan_Supertonic</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -27,7 +30,8 @@
   </div>
   <h3>Kanban Board</h3>
   <div class="mobile_hearder"></div>
-  <!--modal-->
+  <!--In this section, the pop up window is inspired by the html/javascript modal in the reference video. However, based on the original code
+  I add 3 frequency checkboxes in order to let frequency tag appear in each kanban card. I also change the css/js code to make sure it works properly in my web-->
   <div class="modal" id="todo_form">
     <div class="header">
       <p class="popup_title">Create your task</p>
@@ -41,7 +45,8 @@
       <input type="submit" value="Add Todo" id="todo_submit"> 
     </div>
   </div>
-  <!--modal-->
+  <!--The todo-container is the main section of the plan page. Users can operate kanban card here. There are pre-existing kanban cards here to 
+  inform users what information can they add to new kanban card. These pre-existing cards can also be dragged and deleted.-->
   <div class="todo-container">
     <div class="status" id="no_status">
         <h1>No Status</h1>
@@ -91,6 +96,8 @@
 </div>
 <div id="overlay"></div>
 <img src="images/svg_04_bubble2.svg" class="bubble2" />
+<!--Here is the div for mobile version only. I prefer the mobile to be more like an app so I use navigation icon on bottom to replace navigation 
+  section in desktop. To use "display:none" in css, this div will no be shown in desktop version.-->
 <div class="icons_bot">
   <a href="html_01_plan.html">
     <div>   

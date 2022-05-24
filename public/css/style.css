@@ -1,3 +1,5 @@
+/* By using screen width methods, all the CSS files in this prototype allow users to access the web properly in both desktop and mobile version */
+/* The CSS variables allow me to add major colors effiently so that I dont have to copy paste each time.*/
 :root{
     --text:#4F4F4F;
     --main_green:#38BA97;
@@ -175,7 +177,7 @@
         cursor:pointer;
     }
     .start:hover {
-        background:#34997e; /* Green */
+        background:#34997e; 
         color: white;
       }
 }

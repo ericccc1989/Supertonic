@@ -1,3 +1,6 @@
+/* Some part of the code in library page is inspired by tutorial of Basir Payenda */
+/*The javascript is similar to plan page as they both inspired by Basir Payenda's tutorial. But the createTaskdiv function is actually completely different the users should access the link in the reading list  */
+/* This section combines of click and drag, which allows users to drag kanban card created between each columns. This part of javascript content is mainly inspired by Basir Payenda's tutorial. */
 const todos = document.querySelectorAll(".todo");
 const all_status = document.querySelectorAll(".status");
 let draggableTodo = null;
@@ -26,7 +29,6 @@ all_status.forEach((status) =>{
 
 function dragOver(e){
     e.preventDefault();
-    // console.log("dragOver");
 }
 
 function dragEnter(){
@@ -44,7 +46,6 @@ function dragDrop(){
     console.log("dropped");
 }
 
-// modal;
 
 const btns = document.querySelectorAll("[data-target-modal]");
 const close_modals = document.querySelectorAll(".close-modal");
@@ -73,18 +74,19 @@ window.onclick = (event) => {
   }
 };
 
-/* create todo */
 const kanban_submit = document.getElementById('todo_submit');
 
 kanban_submit.addEventListener("click", createTaskdiv);
 
+/* Same name but different function compared to the one in plan page*/
 function createTaskdiv(){
-    /* task div and checkbox are created in this part*/
+    /* anchor element is created here so it prepared to receive web url from users' input*/
     const a =document.createElement("a");
     const todo_div = document.createElement("div");
     const check = document.createElement("input");
 
     /* This part imports user's input and get ready to be appended in div. I also set a max string length of 15 in order to ensure text in the task div will not be too long. */
+    /* There is two inputs receive here. The name input is the one appears on the reading list card. The link input is the url where the user can access by clicking the reading list card*/ 
     const input_val_link = document.getElementById("todo_input_link").value;
     const input_val_name = document.getElementById("todo_input_name").value;
     const txt = document.createTextNode(input_val_name);
@@ -99,11 +101,9 @@ function createTaskdiv(){
     else{
        a.appendChild(txt_max);
     }
-
     todo_div.classList.add("todo");
     todo_div.setAttribute("draggable","true");
 
-    /* create span */
     const span = document.createElement("span");
     const span_txt =document.createTextNode("\u00D7");
     span.classList.add("close");
@@ -116,7 +116,6 @@ function createTaskdiv(){
     span.addEventListener('click', ()=>{
         span.parentElement.style.display = "none";
     });
-    //console.log(todo_div);
     todo_div.addEventListener("dragstart", dragStart);
     todo_div.addEventListener("dragend", dragEnd);
 

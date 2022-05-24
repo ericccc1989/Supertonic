@@ -1,3 +1,5 @@
+/* Some part of the javascript code in practice page's stopwatch is inspired by youtube tutorial of Tyler Potts*/ 
+/* This part is the function where allows the user to operate stopwatch properly*/
 const time_el = document.querySelector('.watch .time');
 const start_btn = document.getElementById('start');
 const stop_btn = document.getElementById('stop');
@@ -10,6 +12,7 @@ start_btn.addEventListener('click', start);
 stop_btn.addEventListener('click', stop);
 reset_btn.addEventListener('click', reset);
 
+/* The timer function based on mathematic relationships of seconds, minutes and hours. Then the second ++ loop will help print the time text correctly in stopwatch.*/
 function timer(){
   seconds++;
 
@@ -47,8 +50,8 @@ function reset(){
   time_el.innerText="00:00:00";
 }
 
-
-
+/* Some part of the javascript code in practice page's metronome is inspired by youtube tutorial of Codes Tutorial*/ 
+/*This part is the metronome code. A songslist array is created based on the bpm licks audio in my files folder.*/
 
 const prev = document.querySelector('.icons_prev');
 const playpause = document.querySelector('.icons_playpause');
@@ -88,6 +91,8 @@ const SongsList = [
 ];
 
 let Songs = false;
+
+/* When user click the pre/play/next button, the audio will be played based on related input. */
 
 function PlaySong(){
   Songs =true;
