@@ -25,8 +25,34 @@
     <div><img src="images/svg_07_theory.svg" class="project_icon_theory" /><p class="theory">Music Theory</p></div>
   </div>
   </div>
-  <h3>Kanban Board</h3>
+  <h3>Library</h3>
   <div class="mobile_hearder"></div>
+  <!--modal-->
+  <div class="modal" id="todo_form">
+    <div class="header">
+      <p class="popup_title">Add Resource</p>
+      <button class="btn close-modal">&times;</button>
+    </div>
+    <div class="body">
+      Resource Name<br>
+      <input type="text" id="todo_input_name" >
+      <br>Web Links<br>
+      <input type="text" id="todo_input_link" >
+      <input type="submit" value="Add Todo" id="todo_submit"> 
+    </div>
+  </div>
+  <!--modal-->
+  <div class="todo-container">
+    <div class="status" id="no_status">
+        <button id="add_btn" data-target-modal="#todo_form">+ Add Resource</button>
+        <div class="todo" id="todo_link">
+          <a href="https://www.youtube.com/watch?v=X9rYOhX77mA">
+           <p>Pentatonic Scales on Youtube</p>
+          </a>
+          <span class="close">&times;</span>
+        </div>
+    </div>
+</div>
 <div class="nav">
     <div>
       <a href="html_01_plan.html" class="nav_plan">
@@ -63,6 +89,6 @@
     </div>
   </a>
 </div>
-<script src="js/practice.js"></script>
+<script src="js/library.js"></script>
 </body>
 </html>
