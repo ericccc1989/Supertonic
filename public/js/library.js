@@ -1,5 +1,5 @@
 /* Some part of the code in library page is inspired by tutorial of Basir Payenda */
-/*The javascript is similar to plan page as they both inspired by Basir Payenda's tutorial. But the createTaskdiv function is actually completely different the users should access the link in the reading list  */
+/* The javascript is similar to plan page as they both inspired by Basir Payenda's tutorial. But the createTaskdiv function is actually completely different the users should access the link in the reading list  */
 /* This section combines of click and drag, which allows users to drag kanban card created between each columns. This part of javascript content is mainly inspired by Basir Payenda's tutorial. */
 const todos = document.querySelectorAll(".todo");
 const all_status = document.querySelectorAll(".status");
